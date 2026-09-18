@@ -2,7 +2,7 @@
 
 **Patrones espacio-temporales de las detecciones de manchas de petróleo del catálogo Cerulean en el golfo Pérsico**
 
-Alex Gómez Sanz · Máster en Data Analytics · Universidad Internacional de Valencia · Curso 2025-2026
+Alex Gómez Sanz · Máster en Formación Permanente en Data Analytics · Universidad Internacional de Valencia · Curso 2025-2026
 
 Este paquete contiene el código, los datos intermedios y los resultados necesarios para reproducir los análisis de la memoria.
 

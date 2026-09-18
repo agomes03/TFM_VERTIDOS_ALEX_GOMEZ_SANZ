@@ -1,0 +1,19 @@
+=== Sensibilidad al tamano de celda (MAUP) ===
+
+Rate ratios del GLM Poisson con offset de esfuerzo, por resolucion:
+
+cell_km              5      10     20
+variable                             
+anios_desde_2023  1.042  1.044  1.028
+dist_costa_km     0.726  0.715  0.666
+log_ais_hours     1.931  1.925  1.799
+mes_cos           0.741  0.742  0.745
+mes_sin           0.714  0.713  0.714
+wind_speed        1.460  1.463  1.449
+
+Filas y celdas por resolucion:
+         n_filas  n_celdas
+cell_km                   
+5        1206092     27412
+10        308871      7020
+20         77216      1755

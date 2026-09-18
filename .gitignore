@@ -1,0 +1,13 @@
+# credenciales locales: no deben publicarse nunca
+gfw_token.txt
+cdsapirc.txt
+.cdsapirc
+API_ERA5.txt
+*.env
+
+# descargas y temporales
+scripts/era5/
+*.nc
+__pycache__/
+.ipynb_checkpoints/
+.venv/

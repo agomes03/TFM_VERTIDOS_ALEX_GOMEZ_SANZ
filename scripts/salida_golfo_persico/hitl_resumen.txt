@@ -1,0 +1,45 @@
+=== Validacion parcial con etiquetas revisadas por humanos ===
+
+Revisadas: 777 de 21832 (3.6% del catalogo)
+AVISO: no es una muestra aleatoria; las proporciones no se extrapolan.
+
+Composicion:
+             clase   n  pct
+    Infrastructure 225 29.0
+     Anthropogenic 128 16.5
+       Vessel, old 122 15.7
+           Natural 121 15.6
+         Ambiguous 105 13.5
+Vessel, coincident  57  7.3
+    Vessel, recent  18  2.3
+            Vessel   1  0.1
+
+Agrupado:
+        grupo   n  pct
+antropogenico 551 70.9
+      natural 121 15.6
+      ambiguo 105 13.5
+
+Confianza del modelo por clase verificada:
+                    count    mean  median     std
+hitl_cls_name                                    
+Vessel                  1  0.9864  0.9864     NaN
+Natural               121  0.9105  0.9243  0.0716
+Vessel, recent         18  0.9080  0.9151  0.0696
+Vessel, old           122  0.8979  0.9119  0.0802
+Anthropogenic         128  0.8741  0.8742  0.0786
+Vessel, coincident     57  0.8600  0.8600  0.0833
+Ambiguous             105  0.8447  0.8459  0.0831
+Infrastructure        225  0.8317  0.8247  0.0829
+
+Mann-Whitney antropogenico vs natural: U=22219, p=8.998e-09, r=0.333
+AUC de machine_confidence (antropogenico vs natural): 0.333
+
+Efecto del umbral de confianza:
+ umbral   n  pct_antropogenico  pct_natural  pct_ambiguo
+   0.00 777              70.91        15.57        13.51
+   0.70 772              70.85        15.54        13.60
+   0.80 581              69.88        19.28        10.84
+   0.85 458              66.81        22.05        11.14
+   0.90 322              65.84        24.22         9.94
+   0.95 169              64.50        26.04         9.47

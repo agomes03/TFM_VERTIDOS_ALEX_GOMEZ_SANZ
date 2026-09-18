@@ -1,0 +1,38 @@
+=== Fase 7b: XGBoost vs Random Forest (viento ERA5) ===
+
+Ajuste:      210558 filas (2023-01 - 2025-06)
+Calibracion: 42120 filas (2025-07 - 2025-12)
+Test:        56160 filas (2026-01 - 2026-08), 8.38% positivos
+
+               pr_auc  roc_auc   brier  brier_sin_calibrar  baseline_pr_auc  baseline_brier
+modelo                                                                                     
+Random Forest  0.3611   0.8929  0.0611              0.0620           0.0838          0.0768
+XGBoost        0.3650   0.8925  0.0610              0.0617           0.0838          0.0768
+
+Mejor modelo por PR-AUC: XGBoost
+Correlacion entre mapas de riesgo por celda (RF vs XGB): 0.993
+
+
+Importancia de variables - Random Forest:
+        variable  importancia
+   log_ais_hours     0.358754
+   dist_costa_km     0.180582
+      wind_speed     0.123844
+   lag1_n_events     0.089258
+         n_pases     0.078655
+  lag1_has_event     0.071949
+         mes_cos     0.041794
+anios_desde_2023     0.035677
+         mes_sin     0.019486
+
+Importancia de variables - XGBoost:
+        variable  importancia
+   log_ais_hours     0.485784
+  lag1_has_event     0.134734
+   lag1_n_events     0.099440
+   dist_costa_km     0.089297
+         n_pases     0.064730
+         mes_cos     0.056069
+      wind_speed     0.043547
+anios_desde_2023     0.013744
+         mes_sin     0.012654

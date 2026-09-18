@@ -1,0 +1,88 @@
+=== Descomposicion de la tendencia temporal residual ===
+
+Corte: 2025-07
+
+A. CONCENTRACION ESPACIAL
+  Celdas comparables: 7020
+  Con incremento de tasa: 18.0%
+  Top 1% de celdas aporta el 21.0% del incremento
+  Top 5% de celdas aporta el 61.0% del incremento
+  Top 10% de celdas aporta el 87.1% del incremento
+  Top 25% de celdas aporta el 100.0% del incremento
+  Top 50% de celdas aporta el 100.0% del incremento
+  Gini del exceso: 0.480
+
+B. FIRMA DEL DETECTOR
+  Confianza mediana: 0.8070 -> 0.8169 (p=1.61e-04)
+  Area mediana: 1.960 -> 2.005 km2 (p=2.15e-01)
+
+C. ESTRATIFICACION
+            Estrato  TasaAntes  TasaDespues  Ratio
+       Trafico alto     20.154       21.924  1.088
+Trafico bajo o nulo      0.329        0.520  1.580
+       Aguas < 10 m     13.342       15.083  1.131
+      Aguas >= 10 m     23.309       25.275  1.084
+
+D. INTENSIDAD DE PROCESADO
+  Ejecuciones/mes: 54 -> 117
+  Spearman ejecuciones-tasa: rho=0.639 (p=3.05e-06)
+  Spearman pasadas-tasa:     rho=0.303
+
+Senales de cambio del detector: 2 | de foco real: 2
+
+
+E. PERFIL DE LAS CELDAS DEL TOP 10 %
+          Variable          Unidad  MedianaTop  MedianaResto     Ratio   p
+Trafico AIS previo horas-buque/mes    229.2333        0.0333 6877.0000 0.0
+ Distancia a costa              km     34.4335       61.9108    0.5562 0.0
+       Profundidad               m     32.0000       25.0000    1.2800 0.0
+       Tasa previa      det/pasada      0.0135        0.0000       NaN 0.0
+
+  Pares contiguos: 448 observados frente a 139 esperados al azar (p=0.0000)
+  Exceso en celdas con trafico previo alto: 96.1%
+
+
+F. CONTROL DE UNIFORMIDAD (ratio de tasas, no exceso absoluto)
+  Factor global de aumento: x1.261
+  Celdas con >=5 detecciones previas: 896
+  Ratio mediano por celda: 0.844 (P25 0.541, P75 1.227)
+  Celdas con exceso significativo sobre el aumento uniforme (BH 5%): 0 (0.0%)
+  Sobredispersion de los ratios: x1.55
+
+
+G. DESCOMPOSICION DE KITAGAWA
+  Tasa agregada: 7.710 -> 9.726 por 1.000 pasadas (x1.261)
+  Efecto composicion: +1.245 (61.8%)
+  Efecto tasa:        +0.771 (38.2%)
+
+  Redistribucion del esfuerzo por decil de tasa previa:
+decil_tasa_previa  tasa_previa_media  peso_antes  peso_despues  cambio_peso_pct
+               D1            0.00000     0.08309       0.07942         -4.42781
+               D2            0.00000     0.10794       0.10726         -0.62925
+               D3            0.00000     0.09765       0.09939          1.78866
+               D4            0.00000     0.10402       0.09635         -7.36883
+               D5            0.00000     0.08675       0.07800        -10.09227
+               D6            0.00000     0.10026       0.08171        -18.49666
+               D7            0.00000     0.10094       0.08913        -11.70360
+               D8            0.00753     0.10717       0.12278         14.56486
+               D9            0.01931     0.10668       0.12323         15.51523
+              D10            0.04623     0.10550       0.12273         16.33146
+
+H. EFECTOS FIJOS DE CELDA
+  Submuestra: 1608 celdas con >=5 detecciones, 70752 filas
+                    Modelo  RateRatioTendencia      p  Viento  TraficoAIS
+         Sin efectos fijos              1.0174 0.0138  0.8807      1.1230
+Con efectos fijos de celda              1.0173 0.0143  0.8210      1.0168
+  Reduccion del efecto de tendencia: 0.6%
+
+
+I. COMPARACION DE ESPECIFICACIONES (Poisson, rate ratios)
+                             Modelo  Tendencia  Viento   AIS EfectosFijos
+    Muestra completa (7.020 celdas)     1.0382   1.472 1.946           No
+Submuestra con señal (1.608 celdas)     1.0174   0.881 1.123           No
+Submuestra + efectos fijos de celda     1.0173   0.821 1.017           Sí
+
+  La tendencia cae de 1,038 a 1,017 al restringir a celdas con senal
+  (efecto de submuestra) y NO cambia al anadir efectos fijos: no es composicion.
+  El viento invierte su signo dentro de celda (1,47 -> 0,82) y el trafico AIS
+  pierde casi todo su efecto (1,95 -> 1,02): ambos son efectos transversales.

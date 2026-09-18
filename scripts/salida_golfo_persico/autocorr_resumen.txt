@@ -1,0 +1,17 @@
+=== Autocorrelacion espacial y correccion de errores estandar ===
+
+I de Moran de los residuos por celda: 0.5386 (esperado -0.0001)
+p-valor por permutacion (499 perms): 0.0020
+
+Errores estandar clasicos vs agrupados por celda:
+                    coef  se_clasico  se_cluster  p_clasico  p_cluster  inflacion_se
+const            -5.4980      0.0123      0.0260        0.0        0.0        2.1203
+wind_speed        0.3864      0.0091      0.0203        0.0        0.0        2.2328
+dist_costa_km    -0.3210      0.0146      0.0313        0.0        0.0        2.1438
+log_ais_hours     0.6656      0.0070      0.0200        0.0        0.0        2.8734
+mes_sin          -0.3291      0.0107      0.0142        0.0        0.0        1.3255
+mes_cos          -0.2980      0.0100      0.0126        0.0        0.0        1.2629
+anios_desde_2023  0.0375      0.0069      0.0090        0.0        0.0        1.2978
+
+Factor medio de inflacion de los SE: 1.86x
+Variables significativas (p<0.05) con SE agrupados: 6 de 6

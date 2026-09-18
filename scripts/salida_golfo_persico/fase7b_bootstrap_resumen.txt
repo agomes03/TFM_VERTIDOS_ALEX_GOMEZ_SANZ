@@ -1,0 +1,11 @@
+=== Bootstrap de la diferencia de PR-AUC (XGBoost - Random Forest) ===
+
+Replicas: 1000 (remuestreo pareado del test 2026, n=56160)
+
+PR-AUC Random Forest: 0.3611  IC95% [0.3486, 0.3752]
+PR-AUC XGBoost:       0.3650  IC95% [0.3528, 0.3799]
+
+Diferencia (XGB - RF): +0.0039  IC95% [-0.0007, +0.0085]
+Proporcion de replicas con XGBoost por delante: 0.953
+
+El intervalo de confianza incluye 0: la diferencia NO es distinguible del ruido muestral. Ambos modelos son estadisticamente equivalentes.

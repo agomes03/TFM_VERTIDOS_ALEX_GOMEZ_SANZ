@@ -1,0 +1,23 @@
+=== Fase 7: modelo predictivo (Random Forest + calibracion isotonica) ===
+
+Ajuste:      210558 filas (2023-01 - 2025-06), 4.25% positivos
+Calibracion: 42120 filas (2025-07 - 2025-12), 7.81% positivos
+Test:        56160 filas (2026-01 - 2026-08), 8.38% positivos
+
+PR-AUC:  0.3600  (baseline = 0.0838)
+ROC-AUC: 0.8898
+Brier (calibrado):    0.0613
+Brier (sin calibrar): 0.0623
+Brier baseline:       0.0768
+
+Importancia de variables:
+        variable  importancia
+   log_ais_hours     0.370760
+   dist_costa_km     0.187547
+      wind_speed     0.108454
+   lag1_n_events     0.089324
+         n_pases     0.077960
+  lag1_has_event     0.073868
+         mes_cos     0.039572
+anios_desde_2023     0.034306
+         mes_sin     0.018210

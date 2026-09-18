@@ -1,0 +1,30 @@
+{
+  "diferencia_observada": 0.003889490624581493,
+  "n_boot": 1000,
+  "esquemas": {
+    "observaciones": {
+      "ic95_bajo": -0.0007172896355003677,
+      "ic95_alto": 0.00847774087394299,
+      "amplitud": 0.009195030509443357,
+      "prop_xgb_mejor": 0.953,
+      "replicas": 1000,
+      "amplitud_relativa": 1.0
+    },
+    "celdas": {
+      "ic95_bajo": -0.0011781763193668428,
+      "ic95_alto": 0.008457876040972272,
+      "amplitud": 0.009636052360339115,
+      "prop_xgb_mejor": 0.937,
+      "replicas": 1000,
+      "amplitud_relativa": 1.0479630655322814
+    },
+    "bloques_50km": {
+      "ic95_bajo": -0.001260083048945948,
+      "ic95_alto": 0.008245342007799602,
+      "amplitud": 0.00950542505674555,
+      "prop_xgb_mejor": 0.936,
+      "replicas": 1000,
+      "amplitud_relativa": 1.0337567718762233
+    }
+  }
+}

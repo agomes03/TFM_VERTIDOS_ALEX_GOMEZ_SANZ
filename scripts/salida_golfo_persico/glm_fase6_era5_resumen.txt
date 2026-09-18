@@ -1,0 +1,49 @@
+=== Poisson GLM (con AIS real) ===
+                 Generalized Linear Model Regression Results                  
+==============================================================================
+Dep. Variable:                      y   No. Observations:               308838
+Model:                            GLM   Df Residuals:                   308831
+Model Family:                 Poisson   Df Model:                            6
+Link Function:                    Log   Scale:                          1.0000
+Method:                          IRLS   Log-Likelihood:                -65850.
+Date:                Wed, 19 Aug 2026   Deviance:                       95262.
+Time:                        16:15:05   Pearson chi2:                 2.67e+05
+No. Iterations:                     7   Pseudo R-squ. (CS):            0.07697
+Covariance Type:            nonrobust                                         
+====================================================================================
+                       coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------
+const               -5.4980      0.012   -447.852      0.000      -5.522      -5.474
+wind_speed           0.3864      0.009     42.430      0.000       0.369       0.404
+dist_costa_km       -0.3210      0.015    -21.982      0.000      -0.350      -0.292
+log_ais_hours        0.6656      0.007     95.459      0.000       0.652       0.679
+mes_sin             -0.3291      0.011    -30.709      0.000      -0.350      -0.308
+mes_cos             -0.2980      0.010    -29.883      0.000      -0.318      -0.278
+anios_desde_2023     0.0375      0.007      5.421      0.000       0.024       0.051
+====================================================================================
+
+Dispersion (Pearson chi2/df): 0.87
+
+
+=== Binomial Negativa (con AIS real) ===
+                     NegativeBinomial Regression Results                      
+==============================================================================
+Dep. Variable:                      y   No. Observations:               308838
+Model:               NegativeBinomial   Df Residuals:                   308831
+Method:                           MLE   Df Model:                            6
+Date:                Wed, 19 Aug 2026   Pseudo R-squ.:                  0.1403
+Time:                        16:15:05   Log-Likelihood:                -63297.
+converged:                       True   LL-Null:                       -73626.
+Covariance Type:            nonrobust   LLR p-value:                     0.000
+====================================================================================
+                       coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------
+const               -5.6314      0.015   -387.252      0.000      -5.660      -5.603
+wind_speed           0.4311      0.011     39.489      0.000       0.410       0.452
+dist_costa_km       -0.4315      0.018    -24.396      0.000      -0.466      -0.397
+log_ais_hours        0.7404      0.009     86.214      0.000       0.724       0.757
+mes_sin             -0.3595      0.013    -28.035      0.000      -0.385      -0.334
+mes_cos             -0.3145      0.012    -26.262      0.000      -0.338      -0.291
+anios_desde_2023     0.0388      0.008      4.727      0.000       0.023       0.055
+alpha                2.3019      0.054     42.377      0.000       2.195       2.408
+====================================================================================

@@ -1,0 +1,4 @@
+Modelo,Tendencia,Viento,AIS,EfectosFijos
+Muestra completa (7.020 celdas),1.0382,1.472,1.946,No
+Submuestra con señal (1.608 celdas),1.0174,0.881,1.123,No
+Submuestra + efectos fijos de celda,1.0173,0.821,1.017,Sí
